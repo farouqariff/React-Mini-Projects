@@ -17,31 +17,25 @@ function App() {
           </p>
         </div>
       </header>
-
       <main className="mx-auto max-w-5xl px-4 py-10">
         <div className="flex items-center justify-between">
           <h2 className="text-lg font-semibold text-zinc-900">Tasks</h2>
           <AddTask setTaskList={setTaskList} />
         </div>
-
         {taskList.length > 0 ? (
-          <>
+          <ul className="mt-4 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
             {taskList.map((task, i) => (
-              <Task
-                key={task.id ?? i}
-                task={task}
-                index={i}
-                setTaskList={setTaskList}
-              />
+              <li key={task.id ?? i} className="list-none">
+                <Task task={task} index={i} setTaskList={setTaskList} />
+              </li>
             ))}
-          </>
+          </ul>
         ) : (
           <div className="mt-6 rounded-2xl border border-dashed border-zinc-200 bg-white p-8 text-center text-zinc-500">
             No tasks yet. Start by creating your first one.
           </div>
         )}
       </main>
-
       <footer className="mt-10 border-t border-zinc-100 bg-white">
         <div className="mx-auto max-w-5xl px-4 py-6 text-sm text-zinc-400">
           Light mode · Minimal · TailwindCSS

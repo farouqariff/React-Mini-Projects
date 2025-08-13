@@ -66,7 +66,6 @@ const AddTask = ({ setTaskList }) => {
                     className="w-full rounded-xl border border-zinc-200 bg-white px-4 py-2.5 text-zinc-900 placeholder-zinc-400 shadow-sm focus:outline-none focus:ring-4 focus:ring-zinc-200"
                     placeholder="e.g. Prepare weekly report"
                     name="task_name"
-                    required
                     value={taskName}
                     onChange={handleInput}
                   />

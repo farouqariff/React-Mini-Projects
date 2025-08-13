@@ -88,7 +88,6 @@ const EditTask = ({ task, index, setTaskList }) => {
                     name="task_name"
                     value={taskName}
                     onChange={handleInput}
-                    required
                   />
                 </div>
 
