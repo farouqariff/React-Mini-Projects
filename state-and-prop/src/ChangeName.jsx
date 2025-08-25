@@ -1,4 +1,4 @@
-const ChangeName = (setUsername) => {
+const ChangeName = ({ setUsername }) => {
   const handlePropChange = () => {
     setUsername("there");
   };
